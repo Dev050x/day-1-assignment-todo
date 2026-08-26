@@ -24,10 +24,8 @@ app.use((err: unknown, req: Request, res: Response, next: NextFunction) => {
     });
 });
 
-if (process.env.NODE_ENV !== "production" && !process.env.VERCEL) {
-    app.listen(PORT, () => {
-        console.log(`Server is running on ${PORT}`);
-    });
-}
+app.listen(PORT, () => {
+    console.log(`Server is running on ${PORT}`);
+});
 
 export default app;
