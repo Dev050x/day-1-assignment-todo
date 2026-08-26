@@ -3,7 +3,7 @@ import { signup, singin } from "../controllers";
 
 const router = Router();
 
-router.get("/sign-up", signup);
-router.get("/sign-in", singin);
+router.post("/sign-up", signup);
+router.post("/sign-in", singin);
 
 export default router;
