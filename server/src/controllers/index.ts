@@ -1,8 +1,8 @@
 import type { Request, Response } from "express";
-import { CreteTodoSchema, deleteTodoSchema, UpdateTodoSchema, UserAuthSchema } from "../schema/index";
-import { sendValidationError } from "../utils/zod-validation";
-import { prisma } from "../lib/db";
-import { create_token } from "../utils/auth";
+import { CreteTodoSchema, deleteTodoSchema, UpdateTodoSchema, UserAuthSchema } from "../schema/index.js";
+import { sendValidationError } from "../utils/zod-validation.js";
+import { prisma } from "../lib/db.js";
+import { create_token } from "../utils/auth.js";
 import bcrypt from "bcrypt";
 
 export async function signup(req: Request, res: Response) {

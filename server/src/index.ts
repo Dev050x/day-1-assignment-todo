@@ -1,6 +1,6 @@
 import express, { type NextFunction, type Request, type Response } from "express";
 import "dotenv/config";
-import router from "./routes/index";
+import router from "./routes/index.js";
 import cors from "cors";
 
 const app = express();

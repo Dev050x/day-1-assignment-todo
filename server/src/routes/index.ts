@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { createTodo, deleteTodo, getTodo, signup, singin, updateTodo } from "../controllers/index";
-import { require_auth } from "../utils/auth";
+import { createTodo, deleteTodo, getTodo, signup, singin, updateTodo } from "../controllers/index.js";
+import { require_auth } from "../utils/auth.js";
 
 const router = Router();
 
