@@ -5,3 +5,15 @@ export const UserAuthSchema = z.object({
     username: string().min(3, "username must be 3 character long"),
     password: string().min(6, "password must be 6 character long")
 });
+
+export const CreteTodoSchema = z.object({
+    name: z.string()
+});
+
+export const UpdateTodoSchema = z.object({
+    id: z.string()
+});
+
+export const deleteTodoSchema = z.object({
+    id: z.string()
+})
