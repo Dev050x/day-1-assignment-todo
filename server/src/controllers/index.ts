@@ -67,7 +67,8 @@ export async function singin(req: Request, res: Response) {
 
     return res.status(200).json({
         msg: "user loggedin succefully",
-        token
+        token,
+        userId: user.id
     });
 }
 
