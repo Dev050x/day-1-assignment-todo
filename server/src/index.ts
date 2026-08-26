@@ -1,4 +1,4 @@
-import express from "express";
+import express, { type NextFunction, type Request, type Response } from "express";
 import "dotenv/config";
 import router from "./routes";
 
@@ -7,6 +7,13 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use("/api/v1",router);
+
+app.use((err: unknown, req: Request, res: Response, next: NextFunction) => {
+    console.log("unknown err: ", err);
+    res.status(500).json({
+        msg: "internal server error"
+    });
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
