@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { CreteTodoSchema, deleteTodoSchema, UpdateTodoSchema, UserAuthSchema } from "../schema";
+import { CreteTodoSchema, deleteTodoSchema, UpdateTodoSchema, UserAuthSchema } from "../schema/index";
 import { sendValidationError } from "../utils/zod-validation";
 import { prisma } from "../lib/db";
 import { create_token } from "../utils/auth";

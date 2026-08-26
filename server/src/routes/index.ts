@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createTodo, deleteTodo, getTodo, signup, singin, updateTodo } from "../controllers";
+import { createTodo, deleteTodo, getTodo, signup, singin, updateTodo } from "../controllers/index";
 import { require_auth } from "../utils/auth";
 
 const router = Router();
